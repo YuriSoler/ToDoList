@@ -6,11 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Icones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Site dos icones: https://fontawesome.com/ -->
 
 </head>
 
 <body>
-
+  <div class="container">
+    <div class="todoList"> <!-- To Do List -->
+      <h1>To Do List</h1>
+      <form class="inputArea"> <!-- Formulario -->
+        <input type="submit" id="taskInput" placeholder="Adicione novas tarefas..."><!-- Entrada da tarefa (input) -->
+        <button type="submit" id="btnADDtask"></button>
+      </form>
+      <div class="containerList">
+        <ul id="listTask">
+          <!-- Aqui vai entrar as tarefas -->
+        </ul>
+        <img class="listVazia" src="assets/img/" alt="vazio"> <!-- imagem quando a lista estiver vazia -->
+      </div>
+    </div>
+  </div>
 </body>
 
 <script src="script.js"></script>
