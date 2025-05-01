@@ -1,0 +1,13 @@
+* {
+  /* Propiedades Universais da pagina */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* Propiedades do "corpo" da pagina */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+}
