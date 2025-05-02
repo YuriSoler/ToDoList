@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   /* Propiedades Universais da pagina */
   margin: 0;
@@ -9,5 +11,85 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vh;
+  min-height: 100vh;
+  background: url(/assets/img/background.jpg) no-repeat center center/cover;
+}
+.container {
+  /* DIV onde fica a TO DO LIST */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+}
+.todoList {
+  /* To Do List */
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  border-radius: 10px;
+  gap: 30px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+h1 {
+  /* Titulo */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #0b072c;
+}
+/* Entrada de dados do usuario (input)*/
+.inputArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.inputArea input {
+  flex: 1;
+  padding: 10px 17px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-radius: 22px;
+  background: rgba(255, 194, 209, 0.3);
+  color: #dbdbdb;
+}
+.inputArea input::placeholder {
+  color: #bcbcbc;
+}
+.inputArea button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  background: rgba(255, 194, 209, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.inputArea button:hover {
+  transform: scale(1.1);
+  background: #0b072c;
+}
+/* Container da lista */
+.containerList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#listTask {
+  width: 100%;
 }
