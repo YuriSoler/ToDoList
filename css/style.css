@@ -137,6 +137,11 @@ h1 {
   margin-left: 10px;
   word-wrap: break-word;
 }
+/* Estilo para tarefa concluída */
+.completo span {
+  text-decoration: line-through; /* Riscar o texto */
+  color: #0b072c;
+}
 /* Botões de editar e apagar */
 .buttonAction {
   display: flex;
