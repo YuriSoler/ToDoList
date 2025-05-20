@@ -12,7 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(/assets/img/background.jpg) no-repeat center center/cover;
+  background: url(/assets/img/background.jpg) no-repeat center center/cover
+    fixed;
 }
 .container {
   /* DIV onde fica a TO DO LIST */
