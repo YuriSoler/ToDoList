@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background: url("/frontend/assets/img/background.jpg") center center/cover fixed no-repeat;
+}
+.container { padding: 20px; }
+.todoList {
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+h1 { text-align: center; color: #fff; margin-bottom: 2rem; font-weight: 900; }
+.inputArea { display: flex; gap: 10px; margin-bottom: 2rem; }
+.inputArea input {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.inputArea input::placeholder { color: #ddd; }
+#listTask { list-style: none; }
+#listTask li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+  word-break: break-all;
+}
+#listTask li.completo span { text-decoration: line-through; opacity: 0.6; color: #0b072c; }
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.task-content span {
+  word-break: break-all;
+}
+
+.task-date {
+  font-size: 0.75rem;
+  color: #ddd;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.inputArea button#btnADDtask {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #1f029c;
+  background: transparent;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonAction button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.inputArea button img,
+.buttonAction button img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.inputArea button:hover img,
+.buttonAction button:hover img {
+  transform: scale(1.2);
+}
+
+.listVazia { display: block; max-width: 150px; margin: 20px auto 0; opacity: 0.5; }
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none; 
+  cursor: pointer;
+  
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: all 0.2s ease-in-out; 
+  flex-shrink: 0; 
+}
+
+.checkbox:checked {
+  background-color: #1f029c; 
+  border-color: #1f029c;
+}
+
+.checkbox:checked::before {
+  content: '';
+  width: 6px;
+  height: 12px;
+  border: solid rgb(72, 253, 0);
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 1px;
+}
+
+#listTask li.completo {
+  opacity: 0.6; 
+}
+
+#listTask li.completo span {
+  text-decoration: line-through;
+  color: #ddd; 
+}
