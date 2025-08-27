@@ -1,0 +1,20 @@
+-- Criação do banco de dados
+CREATE DATABASE IF NOT EXISTS taskmanager;
+USE taskmanager;
+
+-- Criação da tabela 'tarefas'
+CREATE TABLE tarefas (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Chave primária com auto incremento
+    
+    titulo VARCHAR(100) NOT NULL, -- Campo obrigatório com até 100 caracteres
+    
+    descricao TEXT, -- Campo opcional para descrição da tarefa
+    
+    status ENUM('pendente', 'em andamento', 'concluida') NOT NULL, -- Status com valores restritos
+    
+    prioridade ENUM('baixa', 'media', 'alta') NOT NULL, -- Prioridade com valores restritos
+    
+    data_criacao DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Preenchido automaticamente com a data/hora atual
+    
+    data_entrega DATE NOT NULL -- Data de entrega obrigatória
+);

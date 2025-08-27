@@ -10,16 +10,43 @@
   <div class="container">
     <div class="todoList">
       <h1>To Do List</h1>
-      <form class="inputArea">
-        <input type="text" id="taskInput" placeholder="Adicione novas tarefas...">
-        <button type="submit" id="btnADDtask">
-          <img src="/frontend/assets/img/plusIcon.png" alt="Adicionar">
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="taskTitle">Título da Tarefa:</label>
+          <input type="text" id="taskTitle" placeholder="Ex: Desenvolver os projetos" required maxlength="100">
+        </div>
+        
+        <div class="form-group">
+          <label for="taskDescription">Descrição: <p style="opacity:50%;">(Opcional)</p></label>
+          <textarea id="taskDescription" placeholder="Ex: Entregar a todoList completa para a Pamela" maxlength="2000"></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="taskPriority">Prioridade:</label>
+            <select id="taskPriority" required>
+              <option value="baixa">Baixa</option>
+              <option value="media" selected>Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="taskDueDate">Data de Entrega:</label>
+            <input type="date" id="taskDueDate" required>
+          </div>
+        </div>
+        
+        <button type="submit" id="btnAddTask">
+          <img src="../frontend/assets/img/plusIcon.png" alt="Adicionar Tarefa">
+          <span>Adicionar Tarefa</span>
         </button>
       </form>
+      
       <div class="containerList">
         <ul id="listTask">
-          </ul>
-        <img class="listVazia" src="/frontend/assets/img/listaVazia.png" alt="Lista Vazia">
+          <!-- Tarefas renderizadas pelo JavaScript -->
+        </ul>
+        <img class="listVazia" src="../frontend/assets/img/listaVazia.png" alt="Nenhuma tarefa encontrada">
       </div>
     </div>
   </div>
